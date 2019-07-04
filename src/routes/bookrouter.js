@@ -25,4 +25,17 @@ bookrouter.route('/').get((req, res) => {
 });
 
 
+bookrouter.route('/:id').get((req, res) => {
+  const bookId = req.params.id;
+  res.render('book',
+    {
+      title: 'Library',
+      nav: [
+        { name: 'Books', link: '/books' },
+        { name: 'Author', link: '/author' },
+      ],
+      book: books[bookId],
+    });
+});
+
 export default bookrouter;

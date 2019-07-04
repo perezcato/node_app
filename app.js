@@ -19,7 +19,7 @@ app.use('/js', express.static(path.join(__dirname, '/node_modules/jquery/dist'))
 app.set('views', './src/view');
 app.set('view engine', 'ejs');
 
-app.use('/books', bookrouter);
+app.use('/books/', bookrouter);
 app.get('/', (req, res) => {
   res.render('index',
     {
