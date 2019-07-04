@@ -1,3 +1,4 @@
+/* eslint-disable linebreak-style */
 import express from 'express';
 import chalk from 'chalk';
 import debug from 'debug';
