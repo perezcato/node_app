@@ -4,12 +4,23 @@ import chalk from 'chalk';
 import debug from 'debug';
 import morgan from 'morgan';
 import path from 'path';
+import sql from 'mssql';
 import bookrouter from './src/routes/bookrouter';
 
 const app = express();
 const port = process.env.PORT;
-
 const debugApp = debug('app');
+const config = {
+  user: 'library',
+  password: 'perez_2000',
+  server: 'mylibrar.database.windows.net',
+  database: 'PSLibrary',
+  options: {
+    encrypt: true,
+  },
+};
+
+sql.connect(config).catch(err => console.log(err));
 
 app.use(morgan('tiny'));
 app.use(express.static(path.join(__dirname, '/public/')));
