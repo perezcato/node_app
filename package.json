@@ -21,7 +21,7 @@
     "mssql": "^5.1.0",
     "nodemon": "^1.19.1",
     "open": "^6.4.0",
-    "pug": "^2.0.4"
+    "pug": "^3.0.1"
   },
   "devDependencies": {
     "@babel/cli": "^7.4.4",
